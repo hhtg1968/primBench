@@ -1,0 +1,23 @@
+<script>
+//sieb des E - (c) hhtg 16-05-2019 22h04
+PrimBis=100000000;
+document.write("Zahlen bis : ");
+document.write(PrimBis);
+t=new Date().getTime();
+primliste=new Array(PrimBis);
+primliste.fill(0);
+m=Math.sqrt(PrimBis);
+for (n=2;n<=m;n++){
+	if (primliste[n]==0){
+		for (p=n*n;p<=PrimBis;p=p+n){
+			primliste[p]=1;}}}
+anz=0;
+for (n=2;n<=PrimBis;n++){
+	if (primliste[n]==0){
+		anz++;}}
+document.write(". Anzahl Primzahlen: ");
+document.write(anz);
+document.write(", in ");
+document.write((new Date().getTime()-t)/1000);
+document.write(" Sekunden ermittelt!");
+</script>
