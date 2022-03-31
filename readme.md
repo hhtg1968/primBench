@@ -1,2 +1,3 @@
 this app calculates primes by the sieve of erathostenes...
-coded in processing - processing.org
+.pde coded in processing - processing.org
+.c coded in c
